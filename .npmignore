@@ -1,6 +1,6 @@
 src
 cli.js
-eslint.js
+eslint.cjs
 index.d.ts
 jest.config.js
 tsconfig.json
