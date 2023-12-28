@@ -33,10 +33,8 @@ export const TextEditor = () => {
   }
 
   useEffect(() => {
-    console.log(releaseContent);
     html.current = html.current + "\n" + releaseContent;
     setUpdateCount(updateCount + 1);
-    console.log(html.current);
   }, [releaseContent]);
 
 
