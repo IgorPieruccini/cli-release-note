@@ -13,7 +13,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "prepare": "husky install",
-    "publish": "npm run build && npm publish"
+    "release": "npm run build && npm publish"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
