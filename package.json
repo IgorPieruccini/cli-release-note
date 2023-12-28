@@ -2,7 +2,7 @@
   "name": "cli-release-note",
   "version": "0.1.0",
   "description": "Cli to help creating meaningful realese note visually",
-  "private": true,
+  "private": false,
   "bin": {
     "release": "./bin/cli.js"
   },
