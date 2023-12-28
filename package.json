@@ -1,6 +1,6 @@
 {
   "name": "cli-release-note",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cli to help creating meaningful realese note visually",
   "private": false,
   "bin": {
@@ -12,7 +12,8 @@
     "eslint": "npx eslint .",
     "test": "jest",
     "test:watch": "jest --watch",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "publish": "npm run build && npm publish"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
