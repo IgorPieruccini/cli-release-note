@@ -1,3 +1,6 @@
-node-modules
 bin
+
+node_modules
+.husky
+.git
 .env
