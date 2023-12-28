@@ -1,5 +1,6 @@
 {
   "name": "cli-release-note",
+  "version": "0.1.0",
   "description": "Cli to help creating meaningful realese note visually",
   "private": true,
   "bin": {
@@ -57,5 +58,10 @@
     "react-dom": "^18.2.0",
     "react-quill-2": "2.0.2",
     "yargs": "^17.7.2"
+  },
+  "author": "Igor Pieruccini",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IgorPieruccini/cli-release-note"
   }
 }
