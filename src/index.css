@@ -1,0 +1,39 @@
+Body {
+  background-color: #152125;
+}
+
+.w-50p {
+  width: 50%
+}
+
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.h-95vh {
+  height: 95vh;
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+.no-margin {
+  margin: 0px
+}
+
+.no-padding {
+  padding: 0px
+}
+
+.padding-right-24 {
+  padding-right: 24px;
+}
+
+.marging-8 {
+  margin: 8px;
+}
+
+.marging-8-bottom {
+  margin-bottom: 8px;
+}
