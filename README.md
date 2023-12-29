@@ -47,3 +47,35 @@ latest | l | the latest tag or branch on production to be released
 
 In case of __no__ tag or branch match, the terminal you show you the git error,
 if you are referring to a local tag or branch, make sure you have it locally.
+
+## Run project locally
+
+Install all dependencies
+> npm ci
+
+This project consist in two parts, the CLI that will gather information from git
+and create a js file with all commits inside an array.
+
+And the web app that presents the commits from the created file and the text editor.
+
+### CLI
+`cli.js` contains the logic of the cli, it's a plain js run by node when the user
+enters "release" in the terminal.
+
+To test changes locally first build the project:
+> npm run build
+
+Then install the package globally:
+> npm install -g .
+
+Now you can run the release command in your terminal.
+When making to change to cli.js build it again this will make sure to add your changes to
+the build.
+
+### Web App
+
+Assuming you have installed all dependencies, run:
+> npm run dev
+
+This will start a server on port [9000](http://localhost:9000), with the web app, using a fake content,
+that comes from ./src/git-log.js, or if you have run the command before, will show the latest commits from that time.
