@@ -64,13 +64,16 @@ enters "release" in the terminal.
 
 To test changes locally first build the project:
 > npm run build
-
+
 Then install the package globally:
 > npm install -g .
 
 Now you can run the release command in your terminal.
-When making to change to cli.js build it again this will make sure to add your changes to
-the build.
+When making to change to cli.js build it again with this command:
+> npm run build:cli
+
+This will make sure to add your changes you mad inside cli.js to the build, without re-building
+the entire web app
 
 ### Web App
 
