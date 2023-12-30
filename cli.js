@@ -12,6 +12,7 @@ const getDiffCommit = (current, latest) => {
     exec(`git log ${current}..${latest}`, (err, stdout, stderr) => {
       if (err) reject(err);
       if (stderr) reject(err)
+      if (stderr === "") reject("no commits found");
       response(stdout)
     });
   });
@@ -64,7 +65,7 @@ const init = async () => {
     console.error({ e })
     Yargs.exit(1);
   } finally {
-    console.log('all done');
+    console.log('Done! a new tab with the commits will be open in your browser');
   }
 }
 
