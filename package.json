@@ -14,7 +14,10 @@
     "test:watch": "jest --watch",
     "prepare": "husky install",
     "release": "npm run build && npm publish",
-    "build:cli": "node .scripts/copy.cli.development.js"
+    "build:cli": "node .scripts/copy.cli.development.js",
+    "bump:patch": "npm version patch",
+    "bump:minor": "npm version minor",
+    "bump:major": "npm version major"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
