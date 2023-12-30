@@ -7,14 +7,14 @@
     "release": "./bin/cli.js"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js --env mode=production",
-    "dev": "webpack serve --config webpack.config.js --hot --env mode=development",
+    "build": "webpack --config .scripts/webpack.config.js --env mode=production",
+    "dev": "webpack serve --config .scripts/webpack.config.js --hot --env mode=development",
     "eslint": "npx eslint .",
     "test": "jest",
     "test:watch": "jest --watch",
     "prepare": "husky install",
     "release": "npm run build && npm publish",
-    "build:cli": "node copy.cli.development.js"
+    "build:cli": "node .scripts/copy.cli.development.js"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",

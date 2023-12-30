@@ -1,9 +1,10 @@
 const path = require('path');
+const rootProject = require('./root-project');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const devConfig = require('./webpack.development.config');
 const prodConfig = require('./webpack.production.config');
 
-const rootBundlePath = path.resolve(__dirname, 'bin');
+const rootBundlePath = path.resolve(rootProject(), 'bin');
 
 module.exports = (webpackEnv) => {
   const { mode } = webpackEnv;

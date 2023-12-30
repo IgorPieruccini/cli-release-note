@@ -1,6 +1,8 @@
 const fs = require('fs');
+const rootProject = require('./root-project');
 
-const dir = __dirname + "/bin/";
+console.log(rootProject);
+const dir = rootProject() + "/bin/";
 if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir);
 }
