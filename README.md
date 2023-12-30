@@ -1,6 +1,10 @@
 # CLI Release Note 
 CLI tool to help creating release note visually and easily.
 
+> [!WARNING]
+> This tool is in Beta release, and main contain issues, feel free to open
+> your own PR to help fix it.
+
 ## How it works
 It uses the outpout of a git log between tags or branches to input data into a static website, and then
 it opens this website locally in your default browser so you can visually selected the commits and create more
