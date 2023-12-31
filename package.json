@@ -1,6 +1,6 @@
 {
   "name": "cli-release-note",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "description": "Cli to help creating meaningful realese note visually",
   "private": false,
   "bin": {
