@@ -8,3 +8,5 @@ webpack.config.js
 webpack.development.config.js
 webpack.production.config.js
 node_modules
+.github
+.scripts
