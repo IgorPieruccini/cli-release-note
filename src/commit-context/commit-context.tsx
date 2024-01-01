@@ -1,3 +1,4 @@
+import { notification } from "antd";
 import React, { useEffect, useRef, useState } from "react";
 import { ICommitContext } from "./commit-context.types";
 import { parseCommitsSTRtoCommits } from "./commit-context.utils";
@@ -24,7 +25,9 @@ interface Props {
 export const CommitContextProvider = ({ children, commitsSTR }: Props) => {
   const [loading, setLoading] = useState(true);
   const [releaseContent, setReleaseContent] = useState("");
+  const prevReleaseContent = useRef("");
   const commits = useRef<ICommitContext["commits"]>({});
+  const [api, contextHolder] = notification.useNotification();
 
   useEffect(() => {
     commits.current = parseCommitsSTRtoCommits(commitsSTR);
@@ -53,12 +56,35 @@ export const CommitContextProvider = ({ children, commitsSTR }: Props) => {
       }
       , "");
 
-    setReleaseContent(content);
+    if (prevReleaseContent.current !== content) {
+      prevReleaseContent.current = content;
+      setReleaseContent(content);
+      return;
+    }
+
+    api.warning({
+      message: 'Nothing has been changed',
+      description: `
+      Please makes changes to the note, before transfering
+      the content to the text editor
+      `,
+      duration: 3,
+    });
+
   }
 
   if (loading) return null;
 
-  return <CommitContext.Provider value={{ commits: commits.current, commitsArray: Object.values(commits.current), setActive, setNote, releaseContent, updateRelease }}>
+  return <CommitContext.Provider
+    value={{
+      commits: commits.current,
+      commitsArray: Object.values(commits.current),
+      setActive,
+      setNote,
+      releaseContent,
+      updateRelease
+    }}>
+    {contextHolder}
     {children}
   </CommitContext.Provider>
 }
