@@ -9,10 +9,11 @@ const gitLogFilePath = `${root}/bin/git-log.js`;
 /* get-diff-commit.js  */
 const getDiffCommit = (current, latest) => {
   return new Promise((response, reject) => {
-    exec(`git log ${current}..${latest}`, (err, stdout, stderr) => {
+    console.log(`git log ${latest}..${current}`);
+    exec(`git log ${latest}..${current}`, (err, stdout, stderr) => {
       if (err) reject(err);
       if (stderr) reject(err)
-      if (stderr === "") reject("no commits found");
+      if (stdout === "") reject("no commits found");
       response(stdout)
     });
   });
