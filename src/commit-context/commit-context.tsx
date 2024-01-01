@@ -63,7 +63,7 @@ export const CommitContextProvider = ({ children, commitsSTR }: Props) => {
     }
 
     api.warning({
-      message: 'Nothing has been changed',
+      message: 'Nothing add to release note',
       description: `
       Please makes changes to the note, before transfering
       the content to the text editor

@@ -1,4 +1,5 @@
 import { Button, Card, Flex } from "antd";
+import { FileTextOutlined } from "@ant-design/icons";
 import { CommitCard } from "../commit-card/commit-card";
 import React from "react";
 import { useCommitContext } from "../commit-context/use-commit-context";
@@ -9,7 +10,10 @@ export const CommitList = () => {
   return <div className="w-50p">
     <Card size="small" className="marging-8-bottom">
       <Flex justify="end">
-        <Button type="primary" onClick={updateRelease}>Add commits note to release</Button>
+        <Button type="primary" onClick={updateRelease}>
+          Adds commits to release note
+          <FileTextOutlined />
+        </Button>
       </Flex>
     </Card>
     <div className="h-95vh scroll-y padding-right-24">
